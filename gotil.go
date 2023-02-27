@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/akutz/goof"
 	"github.com/kardianos/osext"
+	"github.com/nooperpudd/goof"
 )
 
 const (

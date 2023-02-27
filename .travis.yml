@@ -1,14 +1,12 @@
 language: go
 go:
-  - 1.5.1
+  - 1.20
 before_install:
   - go get github.com/axw/gocov/gocov
   - go get github.com/mattn/goveralls
   - go get golang.org/x/tools/cmd/cover
-  - go get github.com/Masterminds/glide
 install:
-  - glide up --resolve-current
-  - go get -t $(glide nv)
+  - go get -t .
 script:
-  - go install $(glide nv)
+  - go install
   - goveralls -service=travis-ci
